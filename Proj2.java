@@ -32,8 +32,13 @@ public class Proj2
 		GameBoard gameboard = new GameBoard (data);
 		data.board = gameboard;
 		data.initLevel (0);
+
+		HUD hud = new HUD(data);
+		data.hud = hud;
+
 		pane.setLayout (new BorderLayout());
 		pane.add (gameboard, BorderLayout.CENTER);
+		pane.add(hud, BorderLayout.NORTH);
 		frame.setVisible (true);
 	}
 

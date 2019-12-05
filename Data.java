@@ -18,6 +18,7 @@ public class Data
 {
 	public JFrame game;
 	public GameBoard board;
+	public HUD hud;
 	public ArrayList <Block> blocks = new ArrayList <Block> ();
 	public ArrayList <Hole> holes = new ArrayList <Hole> ();
 	public Block currentBlock = null;
