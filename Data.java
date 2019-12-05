@@ -84,22 +84,22 @@ public class Data
 
 
 		//creating blocks
-		Circle circleA1 = new Circle(200, startPoints.get(1).x, startPoints.get(1).y, Color.PINK);
+		Circle circleA1 = new Circle(200, startPoints.get(0).x, startPoints.get(0).y, Color.PINK);
 		Block block1 = new Block(circleA1, 100);
 		blocks.add(block1);
-		Square squareA2 = new Square(100,startPoints.get(2).x , startPoints.get(2).y, Color.RED, 0);
+		Square squareA2 = new Square(100,startPoints.get(1).x , startPoints.get(1).y, Color.RED, 0);
 		Block block2 = new Block(squareA2, 10);
 		blocks.add(block2);
-		Rectangle rectangleA3 = new Rectangle(75, 125,  startPoints.get(3).x, startPoints.get(3).y, Color.BLUE, 0);
+		Rectangle rectangleA3 = new Rectangle(75, 125,  startPoints.get(2).x, startPoints.get(2).y, Color.BLUE, 0);
 		Block block3 = new Block(rectangleA3, 20);
 		blocks.add(block3);
-		Equilateral equilateralA4 = new Equilateral(125, startPoints.get(4).x, startPoints.get(4).y, Color.GRAY,0);
+		Equilateral equilateralA4 = new Equilateral(125, startPoints.get(3).x, startPoints.get(3).y, Color.GRAY,0);
 		Block block4 = new Block(equilateralA4, 40);
 		blocks.add(block4);
-		Scalene scaleneA5 = new Scalene(130, 150, 170, startPoints.get(5).x, startPoints.get(5).y, Color.GREEN,0);
+		Scalene scaleneA5 = new Scalene(130, 150, 170, startPoints.get(4).x, startPoints.get(4).y, Color.GREEN,0);
 		Block block5 = new Block(scaleneA5, 30);
 		blocks.add(block5);
-		Right rightA5 = new Right(120, 145, startPoints.get(6).x, startPoints.get(6).y, Color.ORANGE,0);
+		Right rightA5 = new Right(120, 145, startPoints.get(5).x, startPoints.get(5).y, Color.ORANGE,0);
 		Block block6 = new Block(rightA5, 50);
 		blocks.add(block6);
 
