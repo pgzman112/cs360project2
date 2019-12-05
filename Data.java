@@ -21,6 +21,7 @@ public class Data
 	public HUD hud;
 	public ArrayList <Block> blocks = new ArrayList <Block> ();
 	public ArrayList <Hole> holes = new ArrayList <Hole> ();
+	public ArrayList<Point> startPoints = new ArrayList<>();
 	public Block currentBlock = null;
 	public int level;
 	public int score;
@@ -51,6 +52,7 @@ public class Data
 	{
 		score = 0;
 		blocksToPlace = 6;
+
 		//creating holes
 		Circle circle1 = new Circle(210, 400, 200, Color.BLACK); // possibly add 2 to make it a little bigger than shapes since its the hole
 		Hole hole1 = new Hole(circle1);
@@ -71,7 +73,37 @@ public class Data
 		Hole hole6 = new Hole(right5);
 		holes.add(hole6);
 
+		//add start positions so reset button knows where to place them
+		startPoints.clear();
+		startPoints.add(new Point(150,200));
+		startPoints.add(new Point(150,400));
+		startPoints.add(new Point(150,600));
+		startPoints.add(new Point(1100,200));
+		startPoints.add(new Point(1100,400));
+		startPoints.add(new Point(1100,600));
 
+
+		//creating blocks
+		Circle circleA1 = new Circle(200, startPoints.get(1).x, startPoints.get(1).y, Color.PINK);
+		Block block1 = new Block(circleA1, 100);
+		blocks.add(block1);
+		Square squareA2 = new Square(100,startPoints.get(2).x , startPoints.get(2).y, Color.RED, 0);
+		Block block2 = new Block(squareA2, 10);
+		blocks.add(block2);
+		Rectangle rectangleA3 = new Rectangle(75, 125,  startPoints.get(3).x, startPoints.get(3).y, Color.BLUE, 0);
+		Block block3 = new Block(rectangleA3, 20);
+		blocks.add(block3);
+		Equilateral equilateralA4 = new Equilateral(125, startPoints.get(4).x, startPoints.get(4).y, Color.GRAY,0);
+		Block block4 = new Block(equilateralA4, 40);
+		blocks.add(block4);
+		Scalene scaleneA5 = new Scalene(130, 150, 170, startPoints.get(5).x, startPoints.get(5).y, Color.GREEN,0);
+		Block block5 = new Block(scaleneA5, 30);
+		blocks.add(block5);
+		Right rightA5 = new Right(120, 145, startPoints.get(6).x, startPoints.get(6).y, Color.ORANGE,0);
+		Block block6 = new Block(rightA5, 50);
+		blocks.add(block6);
+
+		/*
 		//creating blocks
 		Circle circleA1 = new Circle(200, 150, 200, Color.PINK);
 		Block block1 = new Block(circleA1, 100);
@@ -91,7 +123,10 @@ public class Data
 		Right rightA5 = new Right(120, 145, 1100, 600, Color.ORANGE,0);
 		Block block6 = new Block(rightA5, 50);
 		blocks.add(block6);
+	*/
+
 	}
+
 
 	public void initLevel1 ()
 	{
