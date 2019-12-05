@@ -34,7 +34,7 @@ public class GameBoard extends JPanel implements MouseMotionListener, MouseListe
 		addMouseListener(this);
 		setFocusable (true);
 		grabFocus();
-        	addKeyListener(this);
+		addKeyListener(this);
 		repaint ();
 	}
 
