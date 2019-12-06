@@ -5,8 +5,8 @@ import java.awt.event.*;
 public class HUD extends JPanel implements MouseListener, KeyListener {
 
     Data data;
-    JButton restartButton, selectLevelButton;
-
+    JButton restartButton;
+    JLabel scoreLabel;
 
     public void mouseClicked (MouseEvent e){}
     public void mousePressed (MouseEvent e){}
@@ -21,6 +21,10 @@ public class HUD extends JPanel implements MouseListener, KeyListener {
         data = D;
         D.hud = this;
         data.hud.setBackground(Color.RED);
+
+        scoreLabel = new JLabel("Score: " + data.score );
+        this.add(scoreLabel);
+
         addMouseListener(this);
         restartButton = new JButton("Restart Level");
         this.add(restartButton);
@@ -40,7 +44,9 @@ public class HUD extends JPanel implements MouseListener, KeyListener {
                     data.holes.get(i).filled     = false;
                     
                 }
-                data.blocksToPlace =6;
+                data.blocksToPlace = 6 ;//monitors level completion
+                data.score = data.scoreAtLevelStart;
+                scoreLabel.setText("Score: " + data.score);
                 data.game.repaint();
             }
         }

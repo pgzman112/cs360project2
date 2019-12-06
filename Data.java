@@ -24,12 +24,14 @@ public class Data
 	public ArrayList<Point> startPoints = new ArrayList<>();
 	public Block currentBlock = null;
 	public int level;
+	public int scoreAtLevelStart;
 	public int score;
 	public int blocksToPlace;
 
 	public Data (JFrame G)
 	{
 		game = G;
+		score = 0;
 	}
 
 	public void initLevel (int L)
@@ -57,7 +59,8 @@ public class Data
 
 	public void initLevel0 ()
 	{
-		score = 0;
+		//score = 0; //removed, score can increase as level is replayed
+		scoreAtLevelStart = score;
 		blocksToPlace = 6;
 
 		//creating holes
@@ -109,34 +112,13 @@ public class Data
 		Right rightA5 = new Right(120, 145, startPoints.get(5).x, startPoints.get(5).y, Color.ORANGE,0);
 		Block block6 = new Block(rightA5, 50);
 		blocks.add(block6);
-
-		/*
-		//creating blocks
-		Circle circleA1 = new Circle(200, 150, 200, Color.PINK);
-		Block block1 = new Block(circleA1, 100);
-		blocks.add(block1);
-		Square squareA2 = new Square(100, 150, 400, Color.RED, 0);
-		Block block2 = new Block(squareA2, 10);
-		blocks.add(block2);
-		Rectangle rectangleA3 = new Rectangle(75, 125,  150, 600, Color.BLUE, 0);
-		Block block3 = new Block(rectangleA3, 20);
-		blocks.add(block3);
-		Equilateral equilateralA4 = new Equilateral(125, 1100, 200, Color.GRAY,0);
-		Block block4 = new Block(equilateralA4, 40);
-		blocks.add(block4);
-		Scalene scaleneA5 = new Scalene(130, 150, 170, 1100, 400, Color.GREEN,0);
-		Block block5 = new Block(scaleneA5, 30);
-		blocks.add(block5);
-		Right rightA5 = new Right(120, 145, 1100, 600, Color.ORANGE,0);
-		Block block6 = new Block(rightA5, 50);
-		blocks.add(block6);
-	*/
 	}
 
 
 	public void initLevel1 ()
 	{
-		score = 0;
+		//score = 0;  //removed, score can increase as level is replayed
+		scoreAtLevelStart = score;
 		blocksToPlace = 6;
 
 		Circle circle1 = new Circle(210, 400, 200, Color.BLACK); // possibly add 2 to make it a little bigger than shapes since its the hole
@@ -191,7 +173,8 @@ public class Data
 
 	public void initLeveL2()
 	{
-		score = 0;
+		//score = 0; //removed score can increase as level is replayed
+		scoreAtLevelStart = score;
 		blocksToPlace = 6;
 
 		Circle circle1 = new Circle(210, 400, 200, Color.BLACK); // possibly add 2 to make it a little bigger than shapes since its the hole
@@ -279,15 +262,20 @@ public class Data
 
 	void placeBlockInHole (Block block, Hole hole)
 	{
+		//increase score and update label in HUD
+		this.score += block.getPoints();
+		this.hud.scoreLabel.setText("Score: " + this.score);
+
 		block.onBoard = false;
 		block.shape.isSelected = false;
 		block.placed = true;
-		hole.filled = true;
-		hole.filledWith = block;
-			block.moveTo (hole.shape.getCenterX(), hole.shape.getCenterY());
-		score += block.getPoints();
+		block.moveTo (hole.shape.getCenterX(), hole.shape.getCenterY());
 		blocksToPlace--;
 		currentBlock = null;
+
+		hole.filled = true;
+		hole.filledWith = block;
+
 		board.repaint ();
 		if (blocksToPlace == 0) {
 			finishLevel();
