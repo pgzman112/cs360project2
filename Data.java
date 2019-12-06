@@ -39,7 +39,7 @@ public class Data
 		level = L;
 		switch (level)
 		{
-			case 0: initLevel0 (); break;
+			case 0: initLevel1 (); break;
 			case 1: initLevel1 (); break;
 			case 2: initLeveL2 (); break;
 		}
