@@ -57,6 +57,16 @@ public class GameBoard extends JPanel implements MouseMotionListener, MouseListe
 		int mouseX = e.getX();
 		int mouseY = e.getY();
 		if(inFrame && selected != null && selected.placed == false ){
+			if(data.level == 1){
+				selected.rotate(.05);
+			}
+			if(data.level == 2){
+				if(mouseX > currentX){
+					selected.rotate(.05);
+				}else{
+					selected.rotate(-.05);
+				}
+			}
 			selected.move (mouseX - currentX, mouseY - currentY);
 			data.checkIfBlockInHole(selected);
 			repaint();

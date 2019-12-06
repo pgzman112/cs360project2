@@ -1,4 +1,4 @@
-// File: Proj2.java
+// File: Proj2.java comment
 // CS 360 - Fall 2019 - Watts
 // Shape Sorter Game App
 // Novmber 2019 
@@ -31,7 +31,7 @@ public class Proj2
 		Container pane = frame.getContentPane();
 		GameBoard gameboard = new GameBoard (data);
 		data.board = gameboard;
-		data.initLevel (0);
+		data.initLevel (2);
 
 		HUD hud = new HUD(data);
 		data.hud = hud;
