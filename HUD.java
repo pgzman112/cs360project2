@@ -40,6 +40,7 @@ public class HUD extends JPanel implements MouseListener, KeyListener {
                     data.holes.get(i).filled     = false;
                     
                 }
+                data.blocksToPlace =6;
                 data.game.repaint();
             }
         }

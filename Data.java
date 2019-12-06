@@ -45,7 +45,14 @@ public class Data
 
 	public void finishLevel ()
 	{
-		System.out.println ("Level complete! Your score is " + score);
+		String message = "Level complete! Your score is " +score +", Select next level";
+		//JOptionPane.showMessageDialog(game, message);
+		Object[] options = {"Level 1", "Level 2", "Level 3"};
+		int temp = JOptionPane.showOptionDialog(game, message, "End of level", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[0] );
+		blocks.clear();
+		holes.clear();
+		startPoints.clear();
+		initLevel(temp);
 	}
 
 	public void initLevel0 ()
@@ -124,7 +131,6 @@ public class Data
 		Block block6 = new Block(rightA5, 50);
 		blocks.add(block6);
 	*/
-
 	}
 
 

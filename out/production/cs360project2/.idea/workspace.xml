@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c5f99623-b416-4a52-a445-cf954b3e22b8" name="Default Changelist" comment="" />
+    <list default="true" id="329ec8ec-2fc9-47e1-ad68-d977ee28ce29" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sampleP21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sampleP21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data.java" beforeDir="false" afterPath="$PROJECT_DIR$/Data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Proj2.java" beforeDir="false" afterPath="$PROJECT_DIR$/Proj2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs360project2/.idea/libraries/sampleP21.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs360project2/.idea/libraries/sampleP21.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs360project2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs360project2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs360project2/Data.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs360project2/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs360project2/HUD.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs360project2/HUD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/cs360project2/Proj2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/cs360project2/Proj2.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -11,22 +21,14 @@
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1UaK9MrtXfOjrmXa7l0Z8kz2NyV" />
+  <component name="ProjectId" id="1UaNInYAeHX1R7653bmDTBiqvaU" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Lab10" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RunDashboard">
@@ -60,11 +62,11 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c5f99623-b416-4a52-a445-cf954b3e22b8" name="Default Changelist" comment="" />
-      <created>1575589113657</created>
+      <changelist id="329ec8ec-2fc9-47e1-ad68-d977ee28ce29" name="Default Changelist" comment="" />
+      <created>1575590669003</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1575589113657</updated>
+      <updated>1575590669003</updated>
     </task>
     <servers />
   </component>
