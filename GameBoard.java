@@ -59,8 +59,8 @@ public class GameBoard extends JPanel implements MouseMotionListener, MouseListe
 		if(inFrame && selected != null && selected.placed == false ){
 			if(data.level == 1){
 				selected.rotate(.05);
-			}
-			if(data.level == 2){
+
+			} else if(data.level == 2){
 				if(mouseX > currentX){
 					selected.rotate(.05);
 				}else{

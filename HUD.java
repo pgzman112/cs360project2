@@ -39,6 +39,9 @@ public class HUD extends JPanel implements MouseListener, KeyListener {
                     data.blocks.get(i).onBoard = true;
                     data.blocks.get(i).placed  = false;
 
+                    double offset = -1 * data.blocks.get(i).shape.getAngleR();
+                    data.blocks.get(i).rotate(offset);
+
                     //reset holes to accept shapes again
                     data.holes.get(i).filledWith = null;
                     data.holes.get(i).filled     = false;
