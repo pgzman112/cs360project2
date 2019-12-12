@@ -7,6 +7,7 @@ public class HUD extends JPanel implements MouseListener, KeyListener {
     Data data;
     JButton restartButton;
     JLabel scoreLabel;
+    JLabel title;
 
     public void mouseClicked (MouseEvent e){}
     public void mousePressed (MouseEvent e){}
@@ -21,6 +22,9 @@ public class HUD extends JPanel implements MouseListener, KeyListener {
         data = D;
         D.hud = this;
         data.hud.setBackground(Color.RED);
+
+        title = new JLabel("Shape maker 3000");
+        this.add(title);
 
         scoreLabel = new JLabel("Score: " + data.score );
         this.add(scoreLabel);
