@@ -21,7 +21,7 @@ public class Proj2
 	Proj2 ()
 	{
 		System.out.println ("In Proj2 constructor");
-		JFrame frame = new JFrame ("Shape Sorter Game");
+		JFrame frame = new JFrame ("Shape maker 3000");
 		frame.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
 		frame.setSize (1250,800);
 		frame.setResizable (true);

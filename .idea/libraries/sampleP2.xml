@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="sampleP2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/out/production/Project2/sampleP2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/out/production/cs360project2/sampleP2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
